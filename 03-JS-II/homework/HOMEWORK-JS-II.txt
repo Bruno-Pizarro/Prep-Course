@@ -1,0 +1,101 @@
+	====================================
+		Explicaciones
+	====================================
+
+
+Bucle "for":
+	La palabra reservada "for" funciona cómo un bucle. ¿Qué quiere decir esto? Básicamente sigue una instrucción de
+	manera repetitiva, esta instrucción tiene una condición la cual define el usuario. 
+	"for" tiene tres (3) parámetros que indicarle y se expresa de la siguiente manera:
+
+		*- for ( i = 0; condición; i++){
+			instrucción
+		     }
+
+	Como se puede ver es muy parecida a un "if", ya que depende de una condición para realizar una instrucción.
+	Vamos a usar la siguiente declaración 'for' para dar ejemplos:
+
+		*- for ( i = 0; i < 10; i++ ){
+
+			console.log("Hola gente!");
+
+		     }
+	Vamos por partes, primeramente tenemos 'for' para iniciar el bucle, seguido de eso encerramos en paréntesis los tres
+	parámetros que nos pide el bucle. El primer parámetro declara una variable que contiene el número "0" llamada "i"
+	(podes poner cualquier nombre, pero es un estándar utilizar "i" haciendo referencia a "iterator", iterador en inglés),
+	como segundo parámetro tenemos la CONDICIÓN, lo cual define si la instrucción se va a realizar o no. Y como tercer y
+	último parámetro tenemos el incremento de la variable "i", este incremento se escribe como: la variable seguido del operador "++",
+	este "operador" realiza un aumento de 1 (uno) a la variable numérica, en este caso, "i" pasaría de 0 a 1, luego de 1 a 2, etc.
+	
+	Orden:	
+	Como ya dijimos, definimos una variable "i" que contiene el número "0". Luego viene la condición, donde 'for' determina
+	si la condición se cumple o no. En este caso la condición es que lo que contiene la variable "i" sea menor que "10" 
+	(utilizando el símbolo "<", mejor conocido como "menor que"). Si esta condición se cumple, entonces 'for' directamente
+	realiza la instrucción encerrada entre llaves "{}". Al terminarla, 'for', vuélve a los parámetros entre paréntesis "()",
+	y revisa el tercer parámetro, este último nos dice que a lo que contenga la variable "i" se le sume un uno (1).
+
+		*- for 					( i = 0;	 		       				 i < 10;							i++ ){
+		    ^inicio del bucle 		 ^declaración de la variable "i"    ^condición                   ^incremento de la variable "i"
+
+
+			console.log("Hola gente!");
+			^instrucción (escribir en la consola "Hola gente!")
+		     }
+	Cuando 'for' incrementa la variable "i", automáticamente vuelve al segundo parámetro a determinar si la condición es verdadera
+	omitiendo el primer parámetro del bucle para volver a realizar las acciones dentro de las llaves "{}" y luego volver a incrementar
+	la variable "i", así sucesivamente hasta que la condición sea falsa.
+	En el momento en que la condición es falsa, el bucle se detiene automáticamente y continua con la siguiente línea de código.
+	En este caso, cuando lo que contiene la variable "i" sea igual a "10", entonces el bucle no va a realizar la instrucción.
+
+	Como última instancia, tenemos los bulces "infinitos", estos se caracterizan por tener una condición la cual nunca va a ser falsa.
+	Por ejemplo: 
+		*- for ( i =10; i > 10; i++ ){
+
+			console.log("Hola gente!");
+
+		     }
+	Este bucle es MUY parecido al anterior, con la dicerencia de que la variable "i" se define con un "10", y la condición nos dice que
+	mientras lo que contiene "i" sea mayor a "10", va a ejecutar la instruccion y luego incrementar la variable "i" en 1. Y ya que la variable
+	"i" va a seguir aumentando, nunca va a ser menor a "10" y siempre va a ser mayor a 10.
+
+
+	Nota extra, una manera de entender la condición y funcionamiento del bucle, es traducirlo a: 
+		"MIENTRAS LA CONDICIÓN SE CUMPLA ENTONCES REALIZAR LAS INSTRUCCIONES Y LUEGO INCREMENTAR LA VARIABLE."
+	En este caso, la traducción del ejemplo sería:
+		"MIENTRAS LA VARIABLE 'i' SEA MENOR QUE '10', ESCRIBIR EN LA CONSOLA 'Hola gente!' Y LUEGO INCREMENTAR 'i'."
+
+Operadores lógicos '&&', '||', '!' :
+	"&&":
+		Los operadores lógicos siempre van a devolver valores booleanos ("true" o "false"), estos operadores se utilizan
+	en condiciones, como por ejemplo, la condición de una declaración "if".
+
+		En el caso del operador "&&", que se traduce a "Y" o "AND"(en inglés), funciona de la siguiente manera:
+			*- if ( 10 > 5 && 5 > 2 ){
+				instrucción;
+			     }
+		Esta línea de código quiere decir que SI (if) "10" es mayor a "5" Y "5" es mayor a "2", entonces realizar la instrucción.
+		Y SÓLO EN EL CASO DE QUE AMBAS CONDICIONES SE CUMPLAN, EL OPERADOR "&&" VA A DEVOLVER "true", de lo
+		contrario, devolverá "false".
+
+
+		En el caso del operador "||", que se traduce a "O" u "OR"(en inglés), funciona de la siguiente manera:
+			*- if ( 10 > 5 || 5 > 2 ){
+				instrucción;
+			     }
+		Esta línea de código quiere decir que SI (if) "10" es mayor a "5" O "5" es mayor a "2", entonces realizar la instrucción.
+		Y EN EL CASO DE CUALQUIERA DE LAS CONDICIONES SE CUMPLA, EL OPERADOR "||" VA A DEVOLVER "true", y SÓLO en
+		en el caso de que NINGUNA se cumpla, devolverá "false".
+
+
+
+		En el caso del operador "!", que se traduce a "NO" o "NOT"(en inglés), funciona de la siguiente manera:
+			*- if ( ! 10 > 5 ){
+				instrucción;
+			     }
+		Este es distinto a "&&" y "||", ya que este devuelve lo contrario a la condición.
+		Por lo que esta línea de código quiere decir que SI (if) la CONDICIÓN ("10" es mayor a "5") es VERDADERA("true"),
+		entonces retornar FALSO("false").
+
+		Con "&&" y "||" podemos enlazar varias condiciones (todas las que necesites)
+		Y al operador "!" lo podemos combinar con las anteriores, de manera de que si devuelven "true", con "!" va a devolver "false"
+		y viceversa.
