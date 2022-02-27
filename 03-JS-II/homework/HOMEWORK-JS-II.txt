@@ -34,7 +34,7 @@ Bucle "for":
 	realiza la instrucción encerrada entre llaves "{}". Al terminarla, 'for', vuélve a los parámetros entre paréntesis "()",
 	y revisa el tercer parámetro, este último nos dice que a lo que contenga la variable "i" se le sume un uno (1).
 
-		*- for 					( i = 0;	 		       				 i < 10;							i++ ){
+		*- for 				( i = 0;	 		      	 		i < 10;				i++ ){
 		    ^inicio del bucle 		 ^declaración de la variable "i"    ^condición                   ^incremento de la variable "i"
 
 
