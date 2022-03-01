@@ -91,5 +91,4 @@ Operadores lógicos '&&', '||', '!' :
 		Este es distinto a "&&" y "||", ya que este devuelve lo contrario a la condición.
 		Por lo que esta línea de código quiere decir que SI (if) la CONDICIÓN ("10" es mayor a "5") es VERDADERA("true"), entonces va a devolver FALSO("false") y viceversa, si la CONDICIÓN es FALSA ("false"), va a devolver VERDADERO("true").
 
-		Con "&&" y "||" podemos enlazar varias condiciones (todas las que necesites)
-		Y al operador "!" lo podemos combinar con las anteriores, de manera de que si devuelven "true", con "!" va a devolver "false" y viceversa.
+		Con "&&" y "||" podemos enlazar varias condiciones (todas las que necesites) Y al operador "!" lo podemos combinar con las anteriores, de manera de que si devuelven "true", con "!" va a devolver "false" y viceversa.
