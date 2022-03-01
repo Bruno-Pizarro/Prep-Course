@@ -4,121 +4,130 @@
 
 
 Variables:
-	Las variables son almacenes para guardar un tipo de dato que necesites para el futuro.
-	Todas las variables se DECLARAN empezando por una palabra reservada del lenguaje como 
-	"var"/"let"/"const" seguido de el NOMBRE de la VARIABLE de la siguiente manera:
+	Las variables son almacenes para guardar un tipo de dato que necesites para el futuro. Éstas se pueden DECLARAR y DEFINIR:
+		Declarar: Esto significa hacer que una variable "exista".
+		Definir: Guardarle un dato cualquiera.
+	Todas las variables se DECLARAN empezando por una palabra reservada del lenguaje como "var" o, "let" o, "const" seguido de el NOMBRE de la VARIABLE de la siguiente manera:
+	
+		*- var / let / const (nombreDeLaVariable);
 
-		*- var/let/const (nombreDeLaVariable);
+		(*Nota: las palabras reservadas son palabras propias del lenguaje las cuales no pueden ser utilizadas para DECLARAR ni DEFINIR una variable)
+
 
 	Y se DEFINEN asignandole un DATO con un signo de " = " de la siguiente manera:
 
-		*- var/let/const (nombreDeLaVariable) = (DATO);
+		*- var / let / const (nombreDeLaVariable) = (DATO);
 
-	Dependiendo de la palabra reservada utilizada antes del nombre va a definir si la variable
-	puede o no CAMBIAR o ser REDEFINIDA, las variables se REDEFINEN con asignandole 
-	un nuevo dato con un signo de "=", como por ejemplo:
+	Dependiendo de la palabra reservada utilizada antes del nombre va a definir si el dato asignado en la variable puede o no CAMBIAR o ser REDEFINIDO, las variables se REDEFINEN asignandole un nuevo dato con un signo de "=", como por ejemplo:
 
-		Con la palabra reservada "var" la variable puede ser redefinida:
+		Con la palabra reservada "var" el dato de la variable puede cambiar:
 
 		*- var variable = dato;
 
 		*- variable = nuevoDato;
 
 
-		Con la palabra reservada "let" la variablepuede ser redefinida:
+		Con la palabra reservada "let" el dato de la variable puede cambiar:
 
 		*- let variable = dato;
 
 		*- variable = nuevoDato;
 
-		La diferencia entre "var" y "let" depende del SCOPE(alcance en español). 
-		Esto se refiere al alcance donde se puede invocar la variable.
+		Como dato extra, la diferencia entre "var" y "let" es el SCOPE(alcance en español). 
+		Esto se refiere al alcance donde se puede utilizar la variable.
 
 
-		Con la palabra reservada "const" la variable NO puede ser redefinida:
+		Con la palabra reservada "const" el dato de la variable NO puede cambiar:
 
 		*- const variable = dato;
 
-		Este tipo de variable va a tener  SIEMPRE el mismo dato.
+		Este tipo de variable va a tener SIEMPRE el mismo dato.
 
 Strings:
 	Las "strings" son un tipo de dato que se basa en un texto, puede ser una palabra,
 	una cadena de texto, una frase, etc.
-	Este tipo de datos se caracterizan por definirse estando entre:
+	Este tipo de datos se caracterizan por estar encerradas entre:
 		*Comillas dobles: ("")
 		*Comillas simples: ('')
 		*Backticks (acento grave en inglés): (``)
-	Hay distintas maneras de definir estas cadenas para, por ejemplo, en el caso de tener que usar
-	comillas dobles en un texto, usar comillas simples.
-	Respecto a los backticks, estos cuentan con la capacidad de utilizar otros tipos de datos dentro
-	de la cadena de texto, para esto se utilizan caracteres de la siguiente manera: `${dato}`
+	Hay distintas formas de encerrar estas cadenas para, por ejemplo, en el caso de tener que usar comillas dobles ("") en un texto, usar comillas simples ('') para encerrar la cadena de texto. Esto se hace porque cuando encerramos, por ejemplo, con comillas dobles("") una cadena de texto, esta no puede contener palabras o frases encerradas entre comillas dobles (""), porque causaría que se cierren las primeras comillas y se genere otra distinta seguida de eso. Un ejemplo visual de esto es:
+		En el siguiente ejemplo va a estar entre paréntesis "()" las partes del texto que el lenguaje va a reconocer como cadena de texto (String). Y entre corchetes "[]", el texto que no va a incluir en la cadena.
+
+		("El intendente dijo ") [Nada de lo que dicen es verdad.] (" luego de su disputa.")
+
+		Como se puede ver, el lenguaje sólo reconoce las partes entre comillas dobles (""), una vez que encuentra una el primer cierre de comillas dobles ("") de izquierda a derecha, entonces termina de reconocer la cadena de texto y la cierra. La forma correcta de escribir el ejemplo anterior es:
+
+			'El intendente dijo "Nada de lo que dicen es verdad." luego de su disputa.'
+
+		En este caso el lenguaje va a reconocer todo el texto con las comillas dobles ("") incluídas.
+
+	Respecto a los backticks, estos cuentan con la capacidad de uusar otros tipos de datos que no son cadenas de texto (Strings), como por ejemplo, variables definidas, dentro de la cadena de texto, para esto se utilizan caracteres de la siguiente manera:
+
+		var numero = 20;
+		`La cantidad de numeros del programa es: ${numero}`;
+
+		En este ejemplo, la cadena de texto mostraría: `La cantidad de numeros del programa es: 20`.
 
 Funciones:
 	Las funciones objetos con instrucciones que define cada usuario para que el código las siga.
-	Éstas se declaran empezando por la palabra reservada "function" seguido de un nombre,
-	un argumento entre paréntesis "()" (opcional), y la instrucción entre llaves "{}":
+	Éstas se declaran empezando por la palabra reservada "function" seguido de un nombre, un argumento entre paréntesis "()" (opcional), y la instrucción entre llaves "{}":
 
 		*- function nombreDeLaFuncion (argumento) {
 			instrucción;
 		     }
 
-	Las funciones tienen la propiedad de ser "invocables", de manera que, si una función ya está declarada
-	podés invocarla en cualquier momento, sin importar cuando la declares.
-	Las funciones se invocan con el nombre de la función seguido de dos paréntesis "()"
+	Las funciones tienen la propiedad de ser "invocables" (que se pueden utilizar) en cualquier momento, de manera que, si una función ya está declarada podés utilizarla en cualquier momento, sin importar cuando la declares.
+	Las funciones se invocan/utilizan con el nombre de la función seguido de dos paréntesis "()"
 
 		*- nombreDeLaFuncion()
 		^nota: dentro de los paréntesis puede ir el argumento si la función lo pide.
 
 	Argumentos:
 
-		Los argumentos son la petición de datos de una función, estos datos pueden ser de todo tipo.
-	Estos argumentos son utilizados dentro de las instrucciones de la función.
+		Los argumentos son la petición de datos de una función, estos datos pueden ser de todo tipo. Estos argumentos son utilizados dentro de las instrucciones de la función.
 		Un ejemplo de un argumento es el siguiente:
-		-Primero declaramos una función y dentro de los paréntesis colocamos, con un nombre
-		identificativo, el dato que se necesita.
+		-Primero declaramos una función y dentro de los paréntesis colocamos, con un nombre identificativo, el dato que se necesita.
 
 		*- function obtenerNombre(nombre) {
 			instrucción;
 		     }
 
-		Se pueden solicitar varios argumentos en una misma función, esto lo logramos separando
-	cada argumento dentro del paréntesis con una coma ",":
+		Se pueden solicitar varios argumentos en una misma función, esto lo logramos separando cada argumento dentro del paréntesis con una coma ",":
 
 		*- function nombreCompleto(nombre, apellido){
 			instrucción;
 		     }
 
 	return:
-		"return" (retornar en inglés) es una palabra reservada del lenguaje. Éste indica que 
-	la función debe detenerse y debe DEVOLVER o RETORNAR el tipo de dato, variable, objeto, etc.,
-	que el usuario le indique.
+		"return" (retornar en inglés) es una palabra reservada del lenguaje. Éste indica que  la función debe detenerse y debe DEVOLVER o RETORNAR el tipo de dato, variable, objeto, etc., que el usuario le indique.
 		"return" se utiliza dentro de las instrucciones de la función, por ejemplo:
 
 		*- function obtenerNombre(nombre){
 			return nombre;
 		     }
 		*- obtenerNombre("Bruno");
-		^Esta función devolverá el dato que esté dentro del argumento "nombre", en este caso,
-		al invocar la función con el argumento ("Bruno"), la función retorna un string que dice "Bruno".
+		^Esta función devolverá el dato que esté dentro del argumento "nombre", en este caso, al invocar o utilizar la función con el argumento ("Bruno") entre los paréntesis, la función devuelve una cadena de texto (string) que dice "Bruno".
 
 Declaraciones "if":
-	La palabra reservada "if" significa "si..." en inglés. Esta declaración funciona de manera que recibe una
-	condición. Se declara empezando con un "if" seguido de una condición entre paréntesis "(condición)" y
-	al final una instrucción encerrada entre llaves, que se acciona en caso de que la condición
-	se cumpla "{instrucción}":
+	La palabra reservada "if" significa "si..." en inglés. Esta declaración funciona de manera que depende una condición o requisito para actuar. Se declara empezando con un "if" seguido de una condición o requisito entre paréntesis: "(condición)"; y al final una instrucción encerrada entre llaves, esta sólo se acciona en caso de que la condición o requisito se cumpla "{instrucción}":
+
 		*- if (condición){
 			instrucción;
 		     }
-	Un ejemplo más simple de entender es:
-		*- if (nombre=="Bruno"){
-		    ^si...        ^"nombre" es igual a "Bruno"
-			return `Hola ${nombre}`
-			 ^devolver "Hola" seguido de "nombre"
-		     }
-	Ésta función verifica que la variable "nombre" sea igual a un texto que contenga "Bruno" y, SI la condición
-	es verdadera, entonces devuelve "Hola" seguido de lo que hay en la variable "nombre" (en este caso "Bruno")
 
-Booleanos (true y false):
-	Los valores booleanos tienen únicamente 2 estados: "true" (verdadero en inglés) y "false" (falso en inglés). Éstos 
-	sólo determinan si algo es verdadero o falso, una declaración que puede devolver un valor "true" o "false" son las
-	declaraciones condicionales "if", cuando la condición se cumple, éste devuelve true y por consiguiente activa la instrucción.
+	Un ejemplo más simple de entender es:
+
+		*- if (nombre=="Bruno"){
+		    ^si...        ^la variable "nombre" es igual a "Bruno"
+			return `Hola ${nombre}`
+			 ^entonces devolver "Hola" seguido de lo que contenga la variable "nombre"
+		     }
+
+	Ésta función verifica que la variable "nombre" sea igual a una cadena de texto (string) que contenga "Bruno" y, SI la condición o requisito es verdadero, entonces devuelve "Hola" seguido de lo que hay en la variable "nombre" (en este caso "Bruno")
+
+Booleanos ("true" y "false"):
+	Los valores booleanos tienen únicamente 2 estados: "true" (verdadero en inglés) y "false" (falso en inglés). Éstos sólo determinan si algo es verdadero o falso, una declaración que puede devolver un valor "true" o "false" son las estructuras condicionales "if", cuando la condición o requisito se cumple, éste devuelve true y por consiguiente activa la instrucción.
+		*- if (nombre="Bruno"){
+			return "Hola Bruno"
+		}
+	Esta estructura condicional sólo va a devolver "Hola Bruno", en caso de que el requisito o condición se cumpla. Si se cumple, esto quiere decir que la condición devolvió "true", caso contrario, devolvió "false".
