@@ -41,7 +41,7 @@ Bucle "for":
 			^instrucción (escribir en la consola "Hola gente!")
 		     }
 
-	Cuando 'for' incrementa la variable "i", automáticamente vuelve al segundo parámetro a determinar, otra vez, si la condición o requisito sigue siendo verdadero, omitiendo el primer parámetro del bucle, si la condicion sigue siendo verdadera vuelve a realizar las instrucciones dentro de las llaves "{}" y luego vuelve a incrementar la variable "i", así sucesivamente hasta que la condición sea falsa.
+	Cuando 'for' incrementa la variable "i", automáticamente vuelve al segundo parámetro a determinar, otra vez, si la condición o requisito sigue siendo verdadero, omitiendo el primer parámetro del bucle, si la condición sigue siendo verdadera vuelve a realizar las instrucciones dentro de las llaves "{}" y luego vuelve a incrementar la variable "i", así sucesivamente hasta que la condición sea falsa.
 
 	En el momento en que la condición es falsa, el bucle se detiene automáticamente y continua con la siguiente línea de código. En este caso, cuando lo que contiene la variable "i" sea igual a "10", entonces el bucle no va a realizar la instrucción.
 
