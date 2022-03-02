@@ -45,7 +45,7 @@ Bucle "for":
 
 	En el momento en que la condición es falsa, el bucle se detiene automáticamente y continua con la siguiente línea de código. En este caso, cuando lo que contiene la variable "i" sea igual a "10", entonces el bucle no va a realizar la instrucción.
 
-	Como última instancia, tenemos los bulces "infinitos", estos se caracterizan por tener una condición la cual nunca va a ser falsa.
+	Como última instancia, tenemos los bucles "infinitos", estos se caracterizan por tener una condición la cual nunca va a ser falsa.
 	Por ejemplo:
 
 		*- for ( i = 10; i > 10; i++ ){
@@ -55,7 +55,7 @@ Bucle "for":
 		     }
 
 
-	Este bucle es MUY parecido al anterior, con la dicerencia de que la variable "i" se define con un "10", y la condición nos dice que: mientras el dato de la variale "i" sea mayor a "10", va a ejecutar la instruccion y luego incrementar la variable "i" en 1. Y ya que la variable "i" va a seguir aumentando, nunca va a ser menor a "10" y por esto va a ser infinito.
+	Este bucle es MUY parecido al anterior, con la diferencia de que la variable "i" se define con un "10", y la condición nos dice que: mientras el dato de la variable "i" sea mayor a "10", va a ejecutar la instruccion y luego incrementar la variable "i" en 1. Y ya que la variable "i" va a seguir aumentando, nunca va a ser menor a "10" y por esto va a ser infinito.
 
 
 	Nota extra, una manera de entender la condición y funcionamiento del bucle, es traducirlo a: 
