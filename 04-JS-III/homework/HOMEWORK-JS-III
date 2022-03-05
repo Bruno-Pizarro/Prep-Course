@@ -1,0 +1,133 @@
+	====================================
+		Explicaciones
+	====================================
+
+Arrays:
+    Los "arrays" (arreglos en inglés) son objetos que actuan como almacenes del tipo de dato que quieras. Funcionan parecido a las variables ya que guardan un dato o un elemento con un nombre que le asignes, con la diferencia de que, dentro de los "arrays" se pueden guardar más de un dato. Y además de esto, pueden guardar CUALQUIER TIPO DE DATO O ELEMENTO, incluso, hasta pueden ser otros "arrays" con datos dentro. Un "array" se utiliza mucho para guardar varios datos y luego poder usar cada uno sin tener que crear muchas variables distintas. 
+
+    Para DECLARAR un "array" (o sea, para decirle al código que el "array" existe), se hace de la siguiente manera. Primero se introduce el nombre del "array", seguido del nombre viene un signo de igual "=" y al final se abren y cierran corchetes "[]":
+        *- nuevoArray = [];
+
+    Y para DEFINIR un "array" (es decir, asignarle datos, objetos, etc. utilizables), se agrega entre los corchetes "[]" los datos que quieras separados por comas ",":
+        *- nuevoArray = [nuevoDato1, nuevodato2]
+
+    *Nota: en el caso de que NO estén TODOS los datos encerrados entre corchetes "[]", el código va a tomarlos como variables y no como objetos "array".
+
+    Elementos o datos:
+        Primearamente hay que entender cómo es que podemos acceder a cada elemento o dato de un "array".
+        Para poder utilizar un elemento de un "array" se debe escribir el nombre del "array" seguido de corchetes "[]" y DENTRO de los corchetes asignar con un número la POSICIÓN del datos.
+        *Nota: LAS POSICIÓNES NO SON IGUAL QUE LA CANTIDAD DE DATOS DENTRO DEL ARRAY.
+
+        Antes de pasar al ejemplo, es importantísimo saber que, todos los lenguajes de programación, EMPIEZAN CONTANDO DESDE EL 0. Por lo que, para saber la POSICIÓN de un DATO en un "array", tenés que empezar contando (en orden de derecha a izquierda) desde el 0. Ahora si vamos a utilizar el primer ejemplo.
+        
+        Primero declaramos y definimos el "array":
+
+            *- nuevoArray = [nuevoDato1, nuevoDato2];
+
+        Luego, usamos el dato de la posición cero (0) para devolverlo y utilizarlo:
+
+            *- nuevoArray[0];
+
+        El dato que devolvería la POSICIÓN CERO (0) es "nuevoDato1", ya que es el primer dato que existe dentro del "array".
+        En cambio, si quisieramos mostrar el dato de la segunda posición del "array", deberíamos hacerlo colocando un uno (1) en vez de un cero (0) dentro de los corchetes "[]":
+
+            *- nuevoArray[1];
+        
+        Y así devolvería "nuevoDato2".
+
+        Método ".length":
+            Bien, ya sabemos cómo extraer un dato de un "array" del cual sabemos cuantos datos tiene y donde está cada dato pero, ¿Y si no sabemos la longitud (cuantos datos o elementos tiene el "array")?. Bueno, para esto tenemos el método ".length" (longitud en inglés). Este sirve para saber cuántos datos o elementos tiene un "array". El método te devuelve un dato numérico, es decir, te muestra qué cantidad de elementos tiene, y se utiliza de la siguiente manera.
+
+            Primero vamos a declarar y definir un array:
+                *- nuevoArray = [nuevoDato1, nuevoDato2];
+            
+            Y ahora vamos a "preguntarle" al código cuántos elementos o datos tiene el array. Para esto vamos a escribir el nombre del array seguido de un punto "." y la palabra "length", todo esto va sin espacios. Además de esto, podemos guardar dentro de una variable extra el valor que nos devuelva el método ".length":
+
+                *- let longitudArray = nuevoArray.length;
+
+            En este ejemplo concreto, la variable "logitudArray" va a contener el valor numérico dos (2), ya que esta es la cantidad de elementos que contiene el array "nuevoArray".
+            Como extra, gracias al método ".length", podemos extraer las POSICIONES de los datos. Como por ejemplo, podemos saber cual es la posición del último dato del array. Por ejemplo, si el método ".length" arroja el número dos (2) habría que restarle uno (1) para saber la posición del dato porque, como ya dijimos, las posiciones empiezan a contarse desde el cero (0).
+
+            Además de esto el método ".length" sirve para recibir la longitud numérica de cualquier tipo de dato, puede ser una variable que contenga una cadena de texto (String). Al usar este método en esa variable, va a devolver la cantidad de caracteres que contiene la cadena de texto (incluídos los espacios).
+
+        Asignar nuevos datos:
+            Cada posición de un "array" puede funcionar como una variable, ya que podemos reasignarle un nuevo valor a las distintas posiciones del "array".
+            Por ejemplo, si queremos cambiar el dato de la posición cero (0), podemos hacerlo de la siguiente manera.
+            Vamos a usar para el ejemplo el siguiente array:
+
+                *- nuevoArray = [dato1, dato2, dato3];
+
+            Primero escribimos el nombre del array seguido de los corchetes "[]" y dentro de éste la posición del dato que queremos reasignar. Seguido de esto colocamos un signo de igual "=", y al final el nuevo dato que queremos asignar en la posición que especificamos entre corchetes:
+
+                *- nuevoArray[0] = nuevoDato1;
+
+            Esta reasignación modificaría el array cambiando el dato o elemento de la posición cero (0), por lo que el array "nuevoArray", luego de la reasignación, nos quedaría de la siguiente manera:
+
+                *- nuevoArray= [nuevoDato1, dato2, dato3];
+
+        Métodos ".push" y ".pop":
+            Otros métodos muy útiles para los arrays son ".push" (empujar en inglés) y ".pop" (estallar o explotar). Ambos tienen una función muy interesante.
+            ".push":
+                Este método agrega un nuevo elemento o dato al final del array. Este puede ser cualquier elemento o dato que le asignes.
+                Esto se logra escribiendolo parecido al método ".length" pero, con una diferencia. Empezando por el nombre del array seguido de un punto "." y la palabra "push" (todo esto sin espacios), seguido de esto, se agregan paréntesis "()" y dentro de los paréntesis se asigna el dato que se va a agregar al final del array.
+                Para este ejemplo vamos a utilizar este array:
+
+                    *- nuevoArray = [dato1, dato2, dato3];
+
+                Ahora vamos a utilizar el método ".push".
+                
+                    *- nuevoArray.push(dato4);
+
+                Este método va a modificar el array "nuevoArray" y va a agregar el dato "dato4" al final de los elementos del array y, además, incrementa la longitud del array. Por lo que el array, luego del método, quedaría de la siguiente manera:
+                
+                    *- nuevoArray = [dato1, dato2, dato3, dato4];
+
+            ".pop":
+                ".pop" hace lo contrario a ".push", es decir, elimina el último elemento o dato de un array y, además, cuando ".pop" es accionado, automaticamente devuelve el valor, dato o elemento que eliminó.
+                Para utilizar este método tenemos que escribir nombre del array seguido de un punto "." y la palabra "pop" (todo esto sin espacios), seguido de esto, se agregan paréntesis "()" y dentro de estos paréntesis NO debe ir nada. Estos paréntesis le indican al lenguaje que debe accionar el método.
+
+                Para este ejemplo vamos a utilizar este array:
+
+                    *- nuevoArray = [dato1, dato2, dato3];
+
+                Ahora vamos a utilizar el método ".pop".
+                
+                    *- nuevoArray.pop();
+
+                Este método va a modificar el array "nuevoArray" y va a eliminar el dato "dato3" el cual está en el final de los elementos del array y, además, disminuye la longitud del array. Por lo que el array, luego del método, quedaría de la siguiente manera:
+                
+                    *- nuevoArray = [dato1, dato2];
+                
+                Y además de modificar el array "nuevoArray", el método ".pop", si lo guardamos en una variable o lo mostramos en la consola, va a devolver el dato, elemento o valor que esté elminando.
+
+            ".unshift":
+                El método ".unshift" funciona exactamente igual que el método ".push", con la diferencia de que ".unshift" sólo que actua en el PRIMER elemento o dato del array, es decir, ".unshift" agrega un nuevo valor al PRINCIPIO del array.
+
+                Para este ejemplo vamos a utilizar este array:
+
+                    *- nuevoArray = [dato1, dato2, dato3];
+
+                Ahora vamos a utilizar el método ".unshift".
+                
+                    *- nuevoArray.unshift(dato0);
+
+                Este método va a modificar el array "nuevoArray" y va a agregar el dato "dato0" al principio de los elementos del array y, además, incrementa la longitud del array. Por lo que el array, luego del método, quedaría de la siguiente manera:
+                
+                    *- nuevoArray = [dato0, dato1, dato2, dato3];
+            ".shift":
+                El método ".shift" funciona exactamente igual que el método ".pop", con la diferencia de que ".shift" sólo que actua en el PRIMER elemento o dato del array, es decir, ".shift" elimina el valor que está en la PRIMERA posición del array.
+
+                Para este ejemplo vamos a utilizar este array:
+
+                    *- nuevoArray = [dato1, dato2, dato3];
+
+                Ahora vamos a utilizar el método ".shift".
+                
+                    *- nuevoArray.shift();
+
+                Este método va a modificar el array "nuevoArray" y va a eliminar el dato "dato1" el cual está en la primera posición de los elementos del array y, además, disminuye la longitud del array. Por lo que el array, luego del método, quedaría de la siguiente manera:
+                
+                    *- nuevoArray = [dato2, dato3];
+                
+                Y además de modificar el array "nuevoArray", el método ".shift", si lo guardamos en una variable o lo mostramos en la consola, va a devolver el dato, elemento o valor que esté elminando.
+            
