@@ -2,8 +2,9 @@
 		Explicaciones
 	====================================
 
+Bien, ahora que ya sabemos hacer estructuras condicionales con "if", ¿Qué pasaría si quiero usar una estructura condicional que se repita? Es decir, ¿Cómo hago para repetir un "if", sin repetirlo incansablemente?
 
-Bucle "for":
+Para esto y más existe el bucle "for":
 	La palabra reservada "for" funciona cómo un bucle. ¿Qué quiere decir esto? Básicamente sigue una instrucción de manera repetitiva, esta instrucción tiene una condición la cual define el usuario. 
 	"for" tiene tres (3) parámetros para darle y se expresa o utiliza de la siguiente manera:
 
@@ -20,13 +21,17 @@ Bucle "for":
 
 		     }
 
+¿for?, ¿i?, ¿<?, ¿i++?, ¿console.log?, ¿Qué es todo esto? ¿Cómo lo utilizo?
+
 	Vamos por partes, primeramente tenemos 'for' para iniciar el bucle, seguido de eso encerramos en paréntesis los tres parámetros que nos pide el bucle. 
 	
 	El primer parámetro declara una variable que contiene el número "0" llamada "i" (podes poner cualquier nombre, pero es un estándar utilizar "i" haciendo referencia a "iterator", iterador en inglés, por ahora no es necesario saber la definición de iterador).
 
-	Como segundo parámetro tenemos la CONDICIÓN o REQUISITO, lo cual define si la instrucción se va a realizar o no. 
+	Como segundo parámetro tenemos la CONDICIÓN o REQUISITO, lo cual define si la instrucción se va a realizar o no.
 	
-	Y como tercer y último parámetro tenemos el incremento de la variable "i", este incremento se escribe como: la variable seguido del operador "++", este "operador" realiza un aumento de 1 (uno) en 1 a una variable con un dato numérico, en este caso, "i" pasaría de 0 a 1, luego de 1 a 2, etc.
+	Y como tercer y último parámetro dentro de los paréntesis tenemos el incremento de la variable "i", este incremento se escribe como: la variable seguido del operador "++", este "operador" realiza un aumento de 1 (uno) en 1 a una variable con un dato numérico, en este caso, "i" pasaría de 0 a 1, luego de 1 a 2, etc.
+
+	Luego de estos 3 (tres) parámetros dentro de los paréntesis "()", indicamos entre llaves "{}" la o las instrucciones que va a seguir. En el ejemplo anterior, le indicamos en las instrucciones con el comando "console.log" que imprima en la "consola" o "terminal" (es decir, donde se mustran los procesos informáticos dentro de un programa) lo que le indicamos entre los paréntesis "()", en este caso, lo que está en los paréntesis es "Hola gente!".
 	
 	Orden:
 
@@ -63,9 +68,9 @@ Bucle "for":
 	La traducción del ejemplo anterior sería:
 		"MIENTRAS LA VARIABLE 'i' SEA MENOR QUE '10', ESCRIBIR EN LA CONSOLA 'Hola gente!' Y LUEGO INCREMENTAR 'i'."
 
+Bien, teniendo claro esto ¿Con qué podemos combinar "if" y "for"?
 
-
-Operadores lógicos '&&', '||', '!' :
+Hay muchas cosas para combinar, pero una muy conocida son los operadores lógicos '&&', '||', '!' :
 	"&&":
 		Los operadores lógicos siempre van a devolver valores booleanos ("true" o "false"), estos operadores se utilizan en condiciones, como por ejemplo, la condición de una declaración "if".
 
