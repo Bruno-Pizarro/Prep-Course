@@ -2,19 +2,25 @@
 		Explicaciones
 	====================================
 
-Arrays:
-    Los "arrays" (arreglos en inglés) son objetos que actuan como almacenes del tipo de dato que quieras. Funcionan parecido a las variables ya que guardan un dato o un elemento con un nombre que le asignes, con la diferencia de que, dentro de los "arrays" se pueden guardar más de un dato. Y además de esto, pueden guardar CUALQUIER TIPO DE DATO O ELEMENTO, incluso, hasta pueden ser otros "arrays" con datos dentro. Un "array" se utiliza mucho para guardar varios datos y luego poder usar cada uno sin tener que crear muchas variables distintas. 
+¡Necesito guardar muchos y distintos elementos en una sola variable!
+¿Cómo hago esto?
+
+Para esto tan común existen los "Arrays":
+    Los "arrays" (arreglos en inglés) son objetos que actuan como almacenes del tipo de dato que quieras y la cantidad que quieras. Funcionan parecido a las variables ya que guardan un dato o un elemento con un nombre que le asignes, con la diferencia de que, dentro de los "arrays" se pueden guardar más de un dato. Y además de esto, pueden guardar CUALQUIER TIPO DE DATO O ELEMENTO, incluso, hasta pueden ser otros "arrays" con datos dentro. Un "array" se utiliza mucho para guardar varios datos y luego poder usar cada uno sin tener que crear muchas variables distintas. 
 
     Para DECLARAR un "array" (o sea, para decirle al código que el "array" existe), se hace de la siguiente manera. Primero se introduce el nombre del "array", seguido del nombre viene un signo de igual "=" y al final se abren y cierran corchetes "[]":
         *- nuevoArray = [];
 
     Y para DEFINIR un "array" (es decir, asignarle datos, objetos, etc. utilizables), se agrega entre los corchetes "[]" los datos que quieras separados por comas ",":
         *- nuevoArray = [nuevoDato1, nuevodato2]
+    
+    *Nota1: para poder guardar datos como cadena de texto se deben incluir las comillas ("", '' o ``) encerrando el texto que deseemos. Por ejemplo "nuevoDato3"
+    *Nota2: en el caso de que NO estén TODOS los datos encerrados entre corchetes "[]", el código va a tomarlos como variables y no como objetos "array".
 
-    *Nota: en el caso de que NO estén TODOS los datos encerrados entre corchetes "[]", el código va a tomarlos como variables y no como objetos "array".
+¿Cómo puedo usar los elementos que están dentro de mi array?
 
-    Elementos o datos:
-        Primearamente hay que entender cómo es que podemos acceder a cada elemento o dato de un "array".
+    Para lograr esto, dejemos claro "elementos" o "datos":
+        Primeramente hay que entender cómo es que podemos acceder a cada elemento o dato de un "array".
         Para poder utilizar un elemento de un "array" se debe escribir el nombre del "array" seguido de corchetes "[]" y DENTRO de los corchetes asignar con un número la POSICIÓN del datos.
         *Nota: LAS POSICIÓNES NO SON IGUAL QUE LA CANTIDAD DE DATOS DENTRO DEL ARRAY.
 
@@ -22,7 +28,7 @@ Arrays:
         
         Primero declaramos y definimos el "array":
 
-            *- nuevoArray = [nuevoDato1, nuevoDato2];
+            *- nuevoArray = ["nuevoDato1", "nuevoDato2"];
 
         Luego, usamos el dato de la posición cero (0) para devolverlo y utilizarlo:
 
@@ -35,11 +41,13 @@ Arrays:
         
         Y así devolvería "nuevoDato2".
 
-        Método ".length":
+    ¿Qué podemos hacer con los arrays?
+
+        Muchas cosas, empecemos por los métodos, el más simple y sobre todo el más común es ".length":
             Bien, ya sabemos cómo extraer un dato de un "array" del cual sabemos cuantos datos tiene y donde está cada dato pero, ¿Y si no sabemos la longitud (cuantos datos o elementos tiene el "array")?. Bueno, para esto tenemos el método ".length" (longitud en inglés). Este sirve para saber cuántos datos o elementos tiene un "array". El método te devuelve un dato numérico, es decir, te muestra qué cantidad de elementos tiene, y se utiliza de la siguiente manera.
 
             Primero vamos a declarar y definir un array:
-                *- nuevoArray = [nuevoDato1, nuevoDato2];
+                *- nuevoArray = ["nuevoDato1", "nuevoDato2"];
             
             Y ahora vamos a "preguntarle" al código cuántos elementos o datos tiene el array. Para esto vamos a escribir el nombre del array seguido de un punto "." y la palabra "length", todo esto va sin espacios. Además de esto, podemos guardar dentro de una variable extra el valor que nos devuelva el método ".length":
 
@@ -50,9 +58,12 @@ Arrays:
 
             Además de esto el método ".length" sirve para recibir la longitud numérica de cualquier tipo de dato, puede ser una variable que contenga una cadena de texto (String). Al usar este método en esa variable, va a devolver la cantidad de caracteres que contiene la cadena de texto (incluídos los espacios).
 
-        Asignar nuevos datos:
+    ¿Los "Array" se pueden modificar?
+
+        ¡Claro! para esto podemos asignar nuevos datos o elementos en posiciones ya ocupadas.
             Cada posición de un "array" puede funcionar como una variable, ya que podemos reasignarle un nuevo valor a las distintas posiciones del "array".
             Por ejemplo, si queremos cambiar el dato de la posición cero (0), podemos hacerlo de la siguiente manera.
+
             Vamos a usar para el ejemplo el siguiente array:
 
                 *- nuevoArray = [dato1, dato2, dato3];
@@ -65,7 +76,10 @@ Arrays:
 
                 *- nuevoArray= [nuevoDato1, dato2, dato3];
 
-        Métodos ".push" y ".pop":
+
+    ¿Hay manera de agregar o elminar un elemento dentro del array al final o al principio sin tener que especificar la posición?
+
+        Por suerte, sí. Hablemos de los métodos ".push", ".pop", ".unshift" y ".shift":
             Otros métodos muy útiles para los arrays son ".push" (empujar en inglés) y ".pop" (estallar o explotar). Ambos tienen una función muy interesante.
             ".push":
                 Este método agrega un nuevo elemento o dato al final del array. Este puede ser cualquier elemento o dato que le asignes.
@@ -130,4 +144,33 @@ Arrays:
                     *- nuevoArray = [dato2, dato3];
                 
                 Y además de modificar el array "nuevoArray", el método ".shift", si lo guardamos en una variable o lo mostramos en la consola, va a devolver el dato, elemento o valor que esté elminando.
-            
+
+Ciclo "for" usados en "Arrays":
+
+    ¿"for"?... ¿Ciclos?... ¿Qué?:
+        Bueno, por empezar, cuando hablamos de "for", nos referimos al ciclo explicado en el anterior Homework (dentro de la carpeta "03-JS-II/homework" hay un archivo de texto que explica este bucle o ciclo), este tipo de bucles se pueden utilizar en un "Array"
+
+    Pero... ¿Para qué?
+        De manera corta sirve para iterar dentro de cada elemento de un "array"
+
+    ¿Qué?
+        Una explicación mas simple y detallada sería decir que, un bucle "for", lo utilizamos en un "array" para recorrer cada elemento de este. Básicamente, podríamos suponer que un array es una caja con múltiples elementos, y para revisar o buscar algo en concreto entre estos elementos que están dentro de esta caja (array) de manera eficiente, utilizamos el bucle "for" para realizarlo.
+
+    Ah, okey, pero ¿cómo hace "for" para revisar cada elemento?
+        "for" tiene una característica la cual se conoce como "for...in", esta utiliza una variable la cual nombramos nosotros (puede tener el nombre que quieras), con esta variable el bucle va recorriendo cada elemento del array y cumple con las instrucciones que nosotros le demos. Un ejemplo de esto sería, por ejemplo, queremos que nos devuelva en forma de cadena de texto cada elemento del array por separado.
+
+    Creo que me va quedando claro, pero ahora ¿cómo se hace esto en código? 
+        Para esto, primero que nada le indicamos al código que va a utilizar un bucle empezando con la palabra "for", seguido de esto colocamos 2 (dos) paréntesis "()", dentro de estos paréntesis, colocamos primero la palabra reservada "let" o "var" (cualquiera de las dos funciona) para crear nuestra variable, seguido de esto, colocamos el nombre que querramos ponerle a la variable que nos va a servir como identificador para el elemento que esta recorriendo, luego, usamos la palabra reservada "in" ("en" en inglés), y luego colocamos el nombre del array. Fuera de los paréntesis seguimos con 2 (dos) llaves "{}" y dentro de las llaves colocamos la instrucción que va a cumplir "for...in".
+        A continuación vamos a utilizar el ejemplo que expliqué anteriormente para pasarlo a código:
+
+        Primero debemos tener un array u objeto declarado y definido.
+            *-nuevoArray=["Hola", 3, 23, "Adiós."]
+
+        Luego utilizamos el ciclo "for...in" para recorrer este array y darle la instrucción de devolver cada elemento como una cadena de texto.
+            *-for (let variable in nuevoArray){
+                return `${nuevoArray[variable]}`;
+            }
+    Pero, ¿Por qué no poner simplemente la variable creada para mostrar el elemento?. En vez de `${nuevoArray[variable]}`, ¿por qué no usar simplemente: return `${variable}`?
+        Esta duda se resuelve muy fácilmente, con decir que, la variable que creamos dentro de los paréntesis de (for...in), sólamente devuelve la POSICIÓN del ELEMENTO en el ARRAY, es decir, si nosotros mostramos en forma de cadena de texto la variable creada en "for...in", nos va a devolver un número desde el 0 a la cantidad de elementos del array - (menos) 1 (esto es por la regla de posición en la programación explicada anteriormente, todo se empieza a contar desde el 0). Por ende, si nosotros llamamos primero al array (en este caso "nuevoArray") y luego mostramos la posición o variable (en este caso la llamamos "variable") entre corchetes "[]", va a devolvernos lo que está dentro de la posición de la variable creada, es decir, recorre cada elemento del array uno por uno y nos revela su posición.
+    
+    *Nota extra (y algo irrelevante): "for...in" también se puede utilizar en "objetos", pero en vez de usar un número, utiliza el nombre que nosotros hayamos asignado a cada elemento del "objeto". De todas formas, aún no es necesario saber lo que es un "objeto".
