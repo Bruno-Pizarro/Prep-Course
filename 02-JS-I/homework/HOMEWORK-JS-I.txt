@@ -3,10 +3,16 @@
 	====================================
 
 
-Variables:
+Empecemos hablando de lo más básico. Las variables:
 	Las variables son almacenes para guardar un tipo de dato que necesites para el futuro. Éstas se pueden DECLARAR y DEFINIR:
-		Declarar: Esto significa hacer que una variable "exista".
-		Definir: Guardarle un dato cualquiera.
+
+¿Qué es "declarar" y "definir"?
+
+	Declarar: Esto significa hacer que una variable "exista".
+	Definir: Guardarle un dato cualquiera.
+	
+Y... ¿Cómo hago eso?
+
 	Todas las variables se DECLARAN empezando por una palabra reservada del lenguaje como "var" o, "let" o, "const" seguido de el NOMBRE de la VARIABLE de la siguiente manera:
 	
 		*- var / let / const (nombreDeLaVariable);
@@ -43,14 +49,19 @@ Variables:
 
 		Este tipo de variable va a tener SIEMPRE el mismo dato.
 
-Strings:
-	Las "strings" son un tipo de dato que se basa en un texto, puede ser una palabra,
-	una cadena de texto, una frase, etc.
-	Este tipo de datos se caracterizan por estar encerradas entre:
-		*Comillas dobles: ("")
-		*Comillas simples: ('')
-		*Backticks (acento grave en inglés): (``)
-	Hay distintas formas de encerrar estas cadenas para, por ejemplo, en el caso de tener que usar comillas dobles ("") en un texto, usar comillas simples ('') para encerrar la cadena de texto. Esto se hace porque cuando encerramos, por ejemplo, con comillas dobles("") una cadena de texto, esta no puede contener palabras o frases encerradas entre comillas dobles (""), porque causaría que se cierren las primeras comillas y se genere otra distinta seguida de eso. Un ejemplo visual de esto es:
+Entendido lo anterior, hablemos de uno de los tipos de datos que podemos guardar en variables. Los "Strings":
+
+	Las "strings" son un tipo de dato que se basa en un texto, puede ser una palabra, una cadena de texto, una frase, etc.
+	Para que el código entienda que el dato que le estamos dando es una cadena de texto, estos tipo de datos se caracterizan por estar encerradas entre:
+		*Comillas dobles: ("") Ej: "¡Hola!"
+		*Comillas simples: ('') Ej: '¡Hola!'
+		*Backticks (acento grave en inglés): (``) Ej: `¡Hola!`
+
+	Todos los ejemplos anteriores funcionan de la misma manera, haciéndole entender al código que son cadenas de texto.
+
+¿Cuál es la diferencia entre cada tipo de comilla?
+
+	Hay distintas formas de encerrar estas cadenas porque, por ejemplo, en el caso de tener que usar comillas dobles ("") dentro de la misma cadena de texto, se usan las comillas simples ('') para encerrar la cadena de texto o String entera. Esto se hace porque cuando encerramos con comillas dobles("") una cadena de texto, esta no puede contener palabras o frases encerradas entre otras comillas dobles ("") para remarcar una frase o palabra, porque causaría que se cierren las primeras comillas y se genere otra distinta seguida de eso. Un ejemplo visual de esto es:
 		En el siguiente ejemplo va a estar entre paréntesis "()" las partes del texto que el lenguaje va a reconocer como cadena de texto (String). Y entre corchetes "[]", el texto que no va a incluir en la cadena.
 
 		("El intendente dijo ") [Nada de lo que dicen es verdad.] (" luego de su disputa.")
@@ -59,17 +70,22 @@ Strings:
 
 			'El intendente dijo "Nada de lo que dicen es verdad." luego de su disputa.'
 
-		En este caso el lenguaje va a reconocer todo el texto con las comillas dobles ("") incluídas.
+		En este caso el lenguaje va a reconocer todo el texto con las comillas dobles ("") aclarando la cita textual incluídas.
 
-	Respecto a los backticks, estos cuentan con la capacidad de uusar otros tipos de datos que no son cadenas de texto (Strings), como por ejemplo, variables definidas, dentro de la cadena de texto, para esto se utilizan caracteres de la siguiente manera:
+	Respecto a los backticks, estos cuentan con la capacidad de usar otros tipos de datos que no son cadenas de texto (Strings), como por ejemplo, variables definidas, dentro de la cadena de texto, para esto se utilizan caracteres de la siguiente manera:
 
 		var numero = 20;
 		`La cantidad de numeros del programa es: ${numero}`;
 
 		En este ejemplo, la cadena de texto mostraría: `La cantidad de numeros del programa es: 20`.
 
-Funciones:
-	Las funciones objetos con instrucciones que define cada usuario para que el código las siga.
+Bueno... ¿Y qué puedo hacer con estas "variables" y "Strings"?
+
+La herramienta más utilizada, las funciones:
+	Las funciones objetos con instrucciones que define cada programador para que el código las siga.
+
+¿Y eso cómo se logra?
+
 	Éstas se declaran empezando por la palabra reservada "function" seguido de un nombre, un argumento entre paréntesis "()" (opcional), y la instrucción entre llaves "{}":
 
 		*- function nombreDeLaFuncion (argumento) {
@@ -82,9 +98,9 @@ Funciones:
 		*- nombreDeLaFuncion()
 		^nota: dentro de los paréntesis puede ir el argumento si la función lo pide.
 
-	Argumentos:
+	¿Argumentos?..
 
-		Los argumentos son la petición de datos de una función, estos datos pueden ser de todo tipo. Estos argumentos son utilizados dentro de las instrucciones de la función.
+		Los argumentos son la petición de datos de una función, es decir, la función pide datos en forma de variable, estos datos pueden ser de todo tipo. Estos argumentos son utilizados dentro de las instrucciones de la función.
 		Un ejemplo de un argumento es el siguiente:
 		-Primero declaramos una función y dentro de los paréntesis colocamos, con un nombre identificativo, el dato que se necesita.
 
@@ -98,7 +114,9 @@ Funciones:
 			instrucción;
 		     }
 
-	return:
+¿Qué instrucciones le puedo dar?
+
+	Bueno, hay demasiadas cosas que se pueden hacer dentro de una función, pero uno de los comandos más básicos es "return":
 		"return" (retornar en inglés) es una palabra reservada del lenguaje. Éste indica que  la función debe detenerse y debe DEVOLVER o RETORNAR el tipo de dato, variable, objeto, etc., que el usuario le indique.
 		"return" se utiliza dentro de las instrucciones de la función, por ejemplo:
 
@@ -108,7 +126,9 @@ Funciones:
 		*- obtenerNombre("Bruno");
 		^Esta función devolverá el dato que esté dentro del argumento "nombre", en este caso, al invocar o utilizar la función con el argumento ("Bruno") entre los paréntesis, la función devuelve una cadena de texto (string) que dice "Bruno".
 
-Declaraciones "if":
+¿Qué pasaría si queremos automarizar una instrucción? Es decir, ¿Qué podemos hacer para que una instrucción se cumpla sin tener que estar revisando manualmente?
+
+Para eso tenemos las declaraciones "if":
 	La palabra reservada "if" significa "si..." en inglés. Esta declaración funciona de manera que depende una condición o requisito para actuar. Se declara empezando con un "if" seguido de una condición o requisito entre paréntesis: "(condición)"; y al final una instrucción encerrada entre llaves, esta sólo se acciona en caso de que la condición o requisito se cumpla "{instrucción}":
 
 		*- if (condición){
