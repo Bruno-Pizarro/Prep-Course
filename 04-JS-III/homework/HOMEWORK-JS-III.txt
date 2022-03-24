@@ -157,20 +157,23 @@ Ciclo "for" usados en "Arrays":
         Una explicación mas simple y detallada sería decir que, un bucle "for", lo utilizamos en un "array" para recorrer cada elemento de este. Básicamente, podríamos suponer que un array es una caja con múltiples elementos, y para revisar o buscar algo en concreto entre estos elementos que están dentro de esta caja (array) de manera eficiente, utilizamos el bucle "for" para realizarlo.
 
     Ah, okey, pero ¿cómo hace "for" para revisar cada elemento?
-        "for" tiene una característica la cual se conoce como "for...in", esta utiliza una variable la cual nombramos nosotros (puede tener el nombre que quieras), con esta variable el bucle va recorriendo cada elemento del array y cumple con las instrucciones que nosotros le demos. Un ejemplo de esto sería, por ejemplo, queremos que nos devuelva en forma de cadena de texto cada elemento del array por separado.
+
+        Bueno, para esto podemos hacer que la variable "i" dentro del bucle "for" incremente de uno (1) en uno (1) y así que vaya recorriendo los elementos uno por uno.
 
     Creo que me va quedando claro, pero ahora ¿cómo se hace esto en código? 
-        Para esto, primero que nada le indicamos al código que va a utilizar un bucle empezando con la palabra "for", seguido de esto colocamos 2 (dos) paréntesis "()", dentro de estos paréntesis, colocamos primero la palabra reservada "let" o "var" (cualquiera de las dos funciona) para crear nuestra variable, seguido de esto, colocamos el nombre que querramos ponerle a la variable que nos va a servir como identificador para el elemento que esta recorriendo, luego, usamos la palabra reservada "in" ("en" en inglés), y luego colocamos el nombre del array. Fuera de los paréntesis seguimos con 2 (dos) llaves "{}" y dentro de las llaves colocamos la instrucción que va a cumplir "for...in".
+        Para esto, primero que nada le indicamos al código que va a utilizar un bucle empezando con la palabra "for". 
+        
+        Seguido de esto colocamos paréntesis "()", dentro de estos paréntesis van a ir 3 parámetros, colocamos primero la palabra reservada "let" o "var" (cualquiera de las dos funciona) para crear nuestra variable, seguido de esto, colocamos el nombre que querramos ponerle a la variable que nos va a servir como identificador para el elemento que esta recorriendo (generalmente se utiliza "i"), luego vamos a colocar en la condición del bucle "for" que 'mientras "i" sea menor que los elementos del array, realice las instrucciones', para esto escribimos "i" seguido del signo menor que "<" y luego el array con el método ".length" menos 1 (uno) y como último parámetro va a incrementar la variable "i" de uno en uno con "i++". Fuera de los paréntesis colocamos llaves "{}" y dentro de las llaves escribimos las instrucciones que va a cumplir "for".
+
         A continuación vamos a utilizar el ejemplo que expliqué anteriormente para pasarlo a código:
 
-        Primero debemos tener un array u objeto declarado y definido.
+        Primero debemos tener un array declarado y definido.
             *-nuevoArray=["Hola", 3, 23, "Adiós."]
 
-        Luego utilizamos el ciclo "for...in" para recorrer este array y darle la instrucción de devolver cada elemento como una cadena de texto.
-            *-for (let variable in nuevoArray){
-                return `${nuevoArray[variable]}`;
+        Luego utilizamos el ciclo "for" para recorrer este array y darle la instrucción de devolver cada elemento como una cadena de texto.
+
+            *-for (let i; i < nuevoArray.length-1; i++){
+                return `${nuevoArray[i]}`;
             }
-    Pero, ¿Por qué no poner simplemente la variable creada para mostrar el elemento?. En vez de `${nuevoArray[variable]}`, ¿por qué no usar simplemente: return `${variable}`?
-        Esta duda se resuelve muy fácilmente, con decir que, la variable que creamos dentro de los paréntesis de (for...in), sólamente devuelve la POSICIÓN del ELEMENTO en el ARRAY, es decir, si nosotros mostramos en forma de cadena de texto la variable creada en "for...in", nos va a devolver un número desde el 0 a la cantidad de elementos del array - (menos) 1 (esto es por la regla de posición en la programación explicada anteriormente, todo se empieza a contar desde el 0). Por ende, si nosotros llamamos primero al array (en este caso "nuevoArray") y luego mostramos la posición o variable (en este caso la llamamos "variable") entre corchetes "[]", va a devolvernos lo que está dentro de la posición de la variable creada, es decir, recorre cada elemento del array uno por uno y nos revela su posición.
-    
-    *Nota extra (y algo irrelevante): "for...in" también se puede utilizar en "objetos", pero en vez de usar un número, utiliza el nombre que nosotros hayamos asignado a cada elemento del "objeto". De todas formas, aún no es necesario saber lo que es un "objeto".
+        
+        Con esto, "for" devolvería cada elemento del array "nuevoArray" en forma de cadena de texto.
