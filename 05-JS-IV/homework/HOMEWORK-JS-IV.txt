@@ -1,0 +1,120 @@
+	====================================
+		Explicaciones
+	====================================
+
+¿Qué pasa si quiero usar un nombre en vez de un número para acceder a un array?
+
+    Para esto existen los "objetos". Estos sirven para poder asignarle un nombre a cada "elemento" del objeto con un dato que guardes dentro. Por ejemplo, en vez de usar un número, utilizamos un nombre identificativo.
+
+    Podemos imaginar a los "objetos" como una plantilla donde podemos construir muchas cosas, es como si tuviera las "bases" para crear un objeto, y con estas "bases" podemos crear muchos objetos del mismo tipo con distintas características.
+
+    Un ejemplo de lo anterior serían las personas. Todas las personas tienen características distintas pero, al final, todas son personas.
+
+    Lo más importante y útil de los objetos es que ¡NO IMPORTA EL ORDEN!, simplemente para usar cada "elemento" de un objeto.
+
+    *Nota: Los "elementos" de un objeto, no se llaman "elementos" pero, por ahora, para que sea más entendible, les voy a decir "elementos". De igual manera más adelante explico cómo se denominan.
+
+¿Cómo se crean los objetos?
+
+    Los objetos se declaran y definen empezando por el nombre del objeto, seguido de esto un signo de igual (=) y despúes llaves ({}). Dentro de estas llaves colocamos lo que serían los "elementos" del objeto. Vamos a imaginar que, para crear elementos, estamos creando variables de manera normal, con la diferencia de que, para asignar estas "variables", vamos a utilizar dos puntos (:). A estas "variables" o "elementos" que creamos dentro de los objetos, se les denomina "PROPIEDADES", porque funcionan como tal, son las propiedades o características de un objeto, y se les guardan los datos que querramos.
+
+    A continuación un objeto de ejemplo:
+
+        *- objetoNuevo = {
+            primerDato: "Dato 1",
+            segundoDato: "Dato 2"
+        }
+    
+    Cada propiedad del objeto se separa por una coma (,) y NO se utiliza el punto y coma (;).
+
+¿Qué diferencia a los objetos de un "Array"?
+
+    Bueno, además de la obvia razón de que los array guardan sus elementos encerrados entre cochetes "[]" y los objetos entre llaves "{}", otra diferencia es que, los "elementos" de un OBJETO se le llaman PROPIEDADES, específicamente las "propiedades" son el nombre de las "variables" que se crean en el objeto. 
+    En este ejemplo, las propiedades de "objetoNuevo" son "primerDato" y "segundoDato":
+
+        *- objetoNuevo = {
+            primerDato: "Dato 1",
+            segundoDato: "Dato 2"
+        }
+
+Y... ¿Qué puedo hacer con los objetos? ¿Funcionan los métodos de un array?
+
+    Los métodos como ".push", ".pop", ".shift" y ".unshift" NO funcionan en un objeto pero, para lograr lo que hacen estos métodos en un objeto, podemos utilizar los siguientes métodos:
+
+        (OBJETO).(PROPIEDAD):
+            Para explicar esto, vamos a ir directamente con un ejemplo.
+            Primero creemos un objeto con varias propiedades.
+                *- objetoPersona = {
+                    nombre: "Bruno",
+                    apellido: "Pizarro",
+                    edad: 22
+                }
+            Como se puede ver, creamos un objeto con 3 propiedades: "nombre", "apellido" y "edad" pero, hay un problema. Yo, Bruno, no tengo 22 años, tengo 18 y quiero cambiarlo, ¿Cómo puedo cambiar esto? Bueno, para esto podemos acceder a la propiedad "edad" y darle un nuevo valor.
+        
+        Pero... ¿Cómo lo hago?
+
+            Primero vamos a poner el nombre del objeto (en este caso "objetoPersona"), seguido de este colocamos un punto "." y al el nombre de la propiedad que queremos modificar (en este caso "edad"). Luego de esto ponemos un signo de igual "=" y el nuevo dato que queremos que tenga.
+
+            *- objetoPersona.edad = 18
+
+            Y así de simple la propiedad "edad" cambiaría a 18.
+        
+        ¿Sirve esto para utilizar los datos de cada propiedad?
+
+            ¡Claro!, con el método "(objeto).(propiedad)" podríamos usar una estructura condicional (if), por ejemplo, para verificar un nombre. Un ejemplo de esto sería el siguiente:
+
+                *- if(objetoPersona.nombre == "Bruno"){
+                        return "Hola Bruno!"
+                }
+
+            En este ejemplo "if" verifica que la propiedad "nombre", dentro del objeto "objetoPersona", sea una cadena de texto que diga "Bruno" y, si es verdadero, va a devolver ("return") la frase "Hola Bruno!".
+        
+        ¿Y si quiero agregar una nueva propiedad?
+
+            ¡Muy sencillo! para esto utilizamos el mismo método, como no importa el orden de las propiedades, no hace falta agregarlo al principio o al final. Vámos al ejemplo:
+            
+            Usaremos el objeto "objetoPersona" de los ejemplos anteriores.
+            Ahora, vamos a utilizar el método (objeto).(propiedad) para crear una nueva propiedad. Para esto simplemente colocamos luego del punto "." la nueva propiedad que queremos agregar.Además de crear la propiedad con este método, podemos asignarle un valor con un signo de igual "=" y después el valor o dato.
+            En este caso quiero agregar la propiedad "nacionalidad" y asignarle "Argentina" como valor.
+            
+                *- objetoPersona.nacionalidad = "Argentina";
+            
+            Con esto, ya tendríamos una nueva propiedad en el objeto.
+
+        ¡Extra!
+
+            Hay otra manera de usar o acceder a las propiedades del objeto, esta manera es con corchetes "[]". La diferencia es que con los corchetes SÓLO podemos ACCEDER (usar) O MODIFICAR una propiedad, sin embargo, no podemos crear nuevas propiedades.
+
+"for...in"
+
+En la clase anterior aprendimos a recorrer arrays con bucles "for" y, por suerte, hay una manera mucho más simple para hacer esto y también sirve con objetos.
+
+¿Cuál es esta manera?
+
+    "for" tiene una característica la cual se conoce como "for...in", esta utiliza una variable la cual nombramos nosotros (puede tener el nombre que quieras), con esta variable el bucle va recorriendo cada elemento del array y cumple con las instrucciones que nosotros le demos. Un ejemplo de esto sería, por ejemplo, queremos que nos devuelva en forma de cadena de texto cada elemento del array por separado.
+
+¿Cómo uso esta característica?
+
+    Para esto, primero que nada le indicamos al código que va a utilizar un bucle empezando con la palabra "for", seguido de esto colocamos paréntesis "()", dentro de estos paréntesis, colocamos primero la palabra reservada "let" o "var" (cualquiera de las dos funciona) para crear nuestra variable, seguido de esto, colocamos el nombre que querramos ponerle a la variable que nos va a servir como identificador para el elemento que esta recorriendo, luego, usamos la palabra reservada "in" ("en" en inglés), y luego colocamos el nombre del array. Fuera de los paréntesis colocamos llaves "{}" y dentro de las llaves ponemos las instrucciones que va a cumplir "for...in".
+
+        Para dar un ejemplo, vamos a utilizar el mismo objeto "objetoPersona"
+
+            *- objetoPersona = {
+                    nombre: "Bruno",
+                    apellido: "Pizarro",
+                    edad: 22
+                }
+
+        
+        Ahora devolvemos en forma de cadena de texto cada propiedad del objeto.
+            *- for (let i in objetoPersona){
+                return `${objetoPersona[i]}`
+            }
+    
+    Pero, ¿Por qué no poner simplemente la variable ("i") creada para mostrar el elemento?. En vez de `${objetoPersona[i]}`, ¿por qué no usar simplemente: return `${i}`?
+
+        Esta duda se resuelve muy fácilmente, con decir que, la variable que creamos dentro de los paréntesis de "for...in" ("i"), sólamente devuelve la POSICIÓN del ELEMENTO o el NOMBRE de la PROPIEDAD, es decir, si nosotros mostramos en forma de cadena de texto la variable "i" creada en "for...in", nos va a devolver: un número desde el 0 a la cantidad de elementos de un array - (menos) 1 (uno) o el nombre de la propiedad de un objeto. 
+        
+        Por ejemplo, en el caso del objeto "objetoPersona" devolvería 3 (tres) propiedades: "nombre", "apellido" y "edad".
+
+        Por ende, si nosotros llamamos primero al objeto o array (en este caso "objetoPersona") y luego mostramos la posición (en el caso de un array) o propiedad (en el caso de un objeto), es decir, la variable (en este caso la llamamos "i") entre corchetes "[]", va a devolvernos lo que está dentro de la propiedad que devuelve la variable "i" creada, es decir, recorre cada elemento del objeto uno por uno y nos revela cada propiedad.
