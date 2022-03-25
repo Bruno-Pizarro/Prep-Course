@@ -9,7 +9,7 @@ Empecemos hablando de lo más básico. Las variables:
 ¿Qué es "declarar" y "definir"?
 
 	Declarar: Esto significa hacer que una variable "exista".
-	Definir: Guardarle un dato cualquiera.
+	Definir: Guardarle a la variable un dato cualquiera.
 	
 Y... ¿Cómo hago eso?
 
@@ -20,11 +20,11 @@ Y... ¿Cómo hago eso?
 		(*Nota: las palabras reservadas son palabras propias del lenguaje las cuales no pueden ser utilizadas para DECLARAR ni DEFINIR una variable)
 
 
-	Y se DEFINEN asignandole un DATO con un signo de " = " de la siguiente manera:
+	Y se DEFINEN asignándole un DATO con un signo de " = " de la siguiente manera:
 
 		*- var / let / const (nombreDeLaVariable) = (DATO);
 
-	Dependiendo de la palabra reservada utilizada antes del nombre va a definir si el dato asignado en la variable puede o no CAMBIAR o ser REDEFINIDO, las variables se REDEFINEN asignandole un nuevo dato con un signo de "=", como por ejemplo:
+	Dependiendo de la palabra reservada utilizada antes del nombre va a definir si el dato asignado en la variable puede o no CAMBIAR o ser REDEFINIDO, las variables se REDEFINEN asignándole un nuevo dato con un signo de "=", como por ejemplo:
 
 		Con la palabra reservada "var" el dato de la variable puede cambiar:
 
@@ -57,7 +57,7 @@ Entendido lo anterior, hablemos de uno de los tipos de datos que podemos guardar
 		*Comillas simples: ('') Ej: '¡Hola!'
 		*Backticks (acento grave en inglés): (``) Ej: `¡Hola!`
 
-	Todos los ejemplos anteriores funcionan de la misma manera, haciéndole entender al código que son cadenas de texto.
+	Todos los ejemplos anteriores funcionan de la misma manera, haciéndo entender al código que son cadenas de texto.
 
 ¿Cuál es la diferencia entre cada tipo de comilla?
 
@@ -70,14 +70,14 @@ Entendido lo anterior, hablemos de uno de los tipos de datos que podemos guardar
 
 			'El intendente dijo "Nada de lo que dicen es verdad." luego de su disputa.'
 
-		En este caso el lenguaje va a reconocer todo el texto con las comillas dobles ("") aclarando la cita textual incluídas.
+		En este caso el lenguaje va a reconocer todo el texto con las comillas dobles ("") aclarando la cita textual, incluídas.
 
 	Respecto a los backticks, estos cuentan con la capacidad de usar otros tipos de datos que no son cadenas de texto (Strings), como por ejemplo, variables definidas, dentro de la cadena de texto, para esto se utilizan caracteres de la siguiente manera:
 
 		var numero = 20;
-		`La cantidad de numeros del programa es: ${numero}`;
+		`La cantidad de números del programa es: ${numero}`;
 
-		En este ejemplo, la cadena de texto mostraría: `La cantidad de numeros del programa es: 20`.
+		En este ejemplo, la cadena de texto mostraría: `La cantidad de números del programa es: 20`.
 
 Bueno... ¿Y qué puedo hacer con estas "variables" y "Strings"?
 
@@ -126,7 +126,7 @@ La herramienta más utilizada, las funciones:
 		*- obtenerNombre("Bruno");
 		^Esta función devolverá el dato que esté dentro del argumento "nombre", en este caso, al invocar o utilizar la función con el argumento ("Bruno") entre los paréntesis, la función devuelve una cadena de texto (string) que dice "Bruno".
 
-¿Qué pasaría si queremos automarizar una instrucción? Es decir, ¿Qué podemos hacer para que una instrucción se cumpla sin tener que estar revisando manualmente?
+¿Qué pasaría si queremos automatizar una instrucción? Es decir, ¿Qué podemos hacer para que una instrucción se cumpla sin tener que estar revisando manualmente?
 
 Para eso tenemos las declaraciones "if":
 	La palabra reservada "if" significa "si..." en inglés. Esta declaración funciona de manera que depende una condición o requisito para actuar. Se declara empezando con un "if" seguido de una condición o requisito entre paréntesis: "(condición)"; y al final una instrucción encerrada entre llaves, esta sólo se acciona en caso de que la condición o requisito se cumpla "{instrucción}":
