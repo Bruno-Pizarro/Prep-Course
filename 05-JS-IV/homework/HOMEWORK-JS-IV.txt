@@ -16,7 +16,7 @@
 
 ¿Cómo se crean los objetos?
 
-    Los objetos se declaran y definen empezando por el nombre del objeto, seguido de esto un signo de igual (=) y despúes llaves ({}). Dentro de estas llaves colocamos lo que serían los "elementos" del objeto. Vamos a imaginar que, para crear elementos, estamos creando variables de manera normal, con la diferencia de que, para asignar estas "variables", vamos a utilizar dos puntos (:). A estas "variables" o "elementos" que creamos dentro de los objetos, se les denomina "PROPIEDADES", porque funcionan como tal, son las propiedades o características de un objeto, y se les guardan los datos que querramos.
+    Los objetos se declaran y definen empezando por el nombre del objeto, seguido de esto un signo de igual (=) y después llaves ({}). Dentro de estas llaves colocamos lo que serían los "elementos" del objeto. Vamos a imaginar que, para crear elementos, estamos creando variables de manera normal, con la diferencia de que, para asignar estas "variables", vamos a utilizar dos puntos (:). A estas "variables" o "elementos" que creamos dentro de los objetos, se les denomina "PROPIEDADES", porque funcionan como tal, son las propiedades o características de un objeto, y se les guardan los datos que querramos.
 
     A continuación un objeto de ejemplo:
 
@@ -29,7 +29,7 @@
 
 ¿Qué diferencia a los objetos de un "Array"?
 
-    Bueno, además de la obvia razón de que los array guardan sus elementos encerrados entre cochetes "[]" y los objetos entre llaves "{}", otra diferencia es que, los "elementos" de un OBJETO se le llaman PROPIEDADES, específicamente las "propiedades" son el nombre de las "variables" que se crean en el objeto. 
+    Bueno, además de la obvia razón de que los array guardan sus elementos encerrados entre corchetes "[]" y los objetos entre llaves "{}", otra diferencia es que, los "elementos" de un OBJETO se le llaman PROPIEDADES, específicamente las "propiedades" son el nombre de las "variables" que se crean en el objeto. 
     En este ejemplo, las propiedades de "objetoNuevo" son "primerDato" y "segundoDato":
 
         *- objetoNuevo = {
@@ -43,7 +43,7 @@ Y... ¿Qué puedo hacer con los objetos? ¿Funcionan los métodos de un array?
 
         (OBJETO).(PROPIEDAD):
             Para explicar esto, vamos a ir directamente con un ejemplo.
-            Primero creemos un objeto con varias propiedades.
+            Primero creamos un objeto con varias propiedades.
                 *- objetoPersona = {
                     nombre: "Bruno",
                     apellido: "Pizarro",
@@ -71,7 +71,7 @@ Y... ¿Qué puedo hacer con los objetos? ¿Funcionan los métodos de un array?
         
         ¿Y si quiero agregar una nueva propiedad?
 
-            ¡Muy sencillo! para esto utilizamos el mismo método, como no importa el orden de las propiedades, no hace falta agregarlo al principio o al final. Vámos al ejemplo:
+            ¡Muy sencillo!, para esto utilizamos el mismo método, como no importa el orden de las propiedades, no hace falta agregarlo al principio o al final. Vamos al ejemplo:
             
             Usaremos el objeto "objetoPersona" de los ejemplos anteriores.
             Ahora, vamos a utilizar el método (objeto).(propiedad) para crear una nueva propiedad. Para esto simplemente colocamos luego del punto "." la nueva propiedad que queremos agregar.Además de crear la propiedad con este método, podemos asignarle un valor con un signo de igual "=" y después el valor o dato.
@@ -95,7 +95,7 @@ En la clase anterior aprendimos a recorrer arrays con bucles "for" y, por suerte
 
 ¿Cómo uso esta característica?
 
-    Para esto, primero que nada le indicamos al código que va a utilizar un bucle empezando con la palabra "for", seguido de esto colocamos paréntesis "()", dentro de estos paréntesis, colocamos primero la palabra reservada "let" o "var" (cualquiera de las dos funciona) para crear nuestra variable, seguido de esto, colocamos el nombre que querramos ponerle a la variable que nos va a servir como identificador para el elemento que esta recorriendo, luego, usamos la palabra reservada "in" ("en" en inglés), y luego colocamos el nombre del array. Fuera de los paréntesis colocamos llaves "{}" y dentro de las llaves ponemos las instrucciones que va a cumplir "for...in".
+    Para esto, primero que nada le indicamos al código que va a utilizar un bucle empezando con la palabra "for", seguido de esto colocamos paréntesis "()", dentro de estos paréntesis, colocamos primero la palabra reservada "let" o "var" (cualquiera de las dos funciona) para crear nuestra variable, seguido de esto, colocamos el nombre que querramos ponerle a la variable que nos va a servir como identificador para el elemento que está recorriendo, luego, usamos la palabra reservada "in" ("en" en inglés), y luego colocamos el nombre del array. Fuera de los paréntesis colocamos llaves "{}" y dentro de las llaves ponemos las instrucciones que va a cumplir "for...in".
 
         Para dar un ejemplo, vamos a utilizar el mismo objeto "objetoPersona"
 
