@@ -31,12 +31,12 @@ Para esto y más existe el bucle "for":
 	
 	Y como tercer y último parámetro dentro de los paréntesis tenemos el incremento de la variable "i", este incremento se escribe como: la variable seguido del operador "++", este "operador" realiza un aumento de 1 (uno) en 1 a una variable con un dato numérico, en este caso, "i" pasaría de 0 a 1, luego de 1 a 2, etc.
 
-	Luego de estos 3 (tres) parámetros dentro de los paréntesis "()", indicamos entre llaves "{}" la o las instrucciones que va a seguir. En el ejemplo anterior, le indicamos en las instrucciones con el comando "console.log" que imprima en la "consola" o "terminal" (es decir, donde se mustran los procesos informáticos dentro de un programa) lo que le indicamos entre los paréntesis "()", en este caso, lo que está en los paréntesis es "Hola gente!".
+	Luego de estos 3 (tres) parámetros dentro de los paréntesis "()", indicamos entre llaves "{}" la o las instrucciones que va a seguir. En el ejemplo anterior, le indicamos en las instrucciones con el comando "console.log" que imprima en la "consola" o "terminal" (es decir, donde se muestran los procesos informáticos dentro de un programa) lo que le indicamos entre los paréntesis "()", en este caso, lo que está en los paréntesis es "Hola gente!".
 	
 	Orden:
 
 	Como ya dijimos, definimos una variable "i" que contiene el número "0". Luego verifica la condición, aquí 'for' determina si la condición o requisito se cumple o no. En este caso la única condición es que el dato que contiene la variable "i" sea menor que "10" (utilizando el símbolo "<", mejor conocido como "menor que"). Si esta condición se cumple, entonces 'for' directamente realiza la instrucción encerrada entre llaves "{}". 
-	Al terminar la instrucción, 'for', vuélve a los parámetros que están entre paréntesis "(), "luego revisa el tercer parámetro, este último nos dice que el dato que contenga la variable "i" se le debe sumar un uno (1).
+	Al terminar la instrucción, 'for', vuelve a los parámetros que están entre paréntesis "(), "luego revisa el tercer parámetro, este último nos dice que el dato que contenga la variable "i" se le debe sumar un uno (1).
 
 		*- for 				( i = 0;	 		      	 		i < 10;				i++ ){
 		    ^inicio del bucle  ^declaración de la variable "i"  ^condición   ^incremento de la variable "i"
@@ -48,7 +48,7 @@ Para esto y más existe el bucle "for":
 
 	Cuando 'for' incrementa la variable "i", automáticamente vuelve al segundo parámetro a determinar, otra vez, si la condición o requisito sigue siendo verdadero, omitiendo el primer parámetro del bucle, si la condición sigue siendo verdadera vuelve a realizar las instrucciones dentro de las llaves "{}" y luego vuelve a incrementar la variable "i", así sucesivamente hasta que la condición sea falsa.
 
-	En el momento en que la condición es falsa, el bucle se detiene automáticamente y continua con la siguiente línea de código. En este caso, cuando lo que contiene la variable "i" sea igual a "10", entonces el bucle no va a realizar la instrucción.
+	En el momento en que la condición es falsa, el bucle se detiene automáticamente y continúa con la siguiente línea de código. En este caso, cuando lo que contiene la variable "i" sea igual a "10", entonces el bucle no va a realizar la instrucción.
 
 	Como última instancia, tenemos los bucles "infinitos", estos se caracterizan por tener una condición la cual nunca va a ser falsa.
 	Por ejemplo:
@@ -60,7 +60,7 @@ Para esto y más existe el bucle "for":
 		     }
 
 
-	Este bucle es MUY parecido al anterior, con la diferencia de que la variable "i" se define con un "10", y la condición nos dice que: mientras el dato de la variable "i" sea mayor a "10", va a ejecutar la instruccion y luego incrementar la variable "i" en 1. Y ya que la variable "i" va a seguir aumentando, nunca va a ser menor a "10" y por esto va a ser infinito.
+	Este bucle es MUY parecido al anterior, con la diferencia de que la variable "i" se define con un "10", y la condición nos dice que: mientras el dato de la variable "i" sea mayor a "10", va a ejecutar la instrucción y luego incrementar la variable "i" en 1. Y ya que la variable "i" va a seguir aumentando, nunca va a ser menor a "10" y por esto va a ser infinito.
 
 
 	Nota extra, una manera de entender la condición y funcionamiento del bucle, es traducirlo a: 
