@@ -48,7 +48,7 @@
 	
 	Vamos con el primer problema, el de las bebidas.
 
-	Creemos la clase "Bebidas" y formamos el constructor que va a obtener las propiedades de cada una.
+	Creamos la clase "Bebidas" y formamos el constructor que va a obtener las propiedades de cada una.
 	Dentro del constructor vamos a pedir las siguientes propiedades:
 	+Valor energético (valorEnergetico)
 	+Azúcares (azucares)
