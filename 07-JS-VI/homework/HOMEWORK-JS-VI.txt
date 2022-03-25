@@ -1,0 +1,64 @@
+	====================================
+		Explicaciones
+	====================================
+
+    ¿Sabías que se pueden usar funciones dentro de funciones?
+
+    Así es, estas se llaman "Funciones Callback" ("llamada de vuelta" en inglés), y básicamente son eso, funciones que sirven como argumento o parámetro de otra función para lograr resolver un problema de manera más razonable.
+
+    ¿Y en código?...
+
+    Bueno, primero creamos una función normal, que se va a llamar "callback", la cual va a actuar de "Callback". Para esto hacemos una función de la manera tradicional. En este caso, este "callback" va a retornar (return) entre sus llaves "{}" una cadena de texto que diga "¡Soy un callback!":
+
+        *-function callback(){
+            return "¡Soy un callback!";
+        }
+
+    Ahora vamos a crear la función que va a usar el "callback" en sus parámetros para funcionar. Esta va a tener el nombre de "mensaje" y entre los paréntesis va a esperar el argumento o parámetro "cb"(CallBack, puede tener cualquier nombre) y entre las llaves "{}" de la función "mensaje" se va a llamar/usar o invocar la función que esté en el argumento "cb":
+
+        *-function mensaje (cb){
+            cb();
+        }
+
+    Y por último, simplemente llamamos o utilizamos la función "mensaje" y entre paréntesis colocamos el nombre de la función que utilizamos de CallBack, en este caso "callback":
+
+        *-mensaje(callback);
+
+    Así, la función "mensaje()", nos devuelve "¡Soy un callback!"
+
+    ¿Cómo podríamos usar estos CallBack?
+
+    Bueno, hay bastantes formas de usarlas, pero hoy voy a dar un ejemplo totalmente entendible. El ejemplo va a ser crear una calculadora.
+    
+    Aclaro antes de empezar que esta forma de crear una calculadora NO ES LA RECOMENDADA, simplemente está hecha de forma que sea intuitiva.
+
+    Primero vamos a crear 2 callback, una función de SUMA y una de RESTA.
+    Dentro de cada CallBack, vamos a pedir un parametro "a" y un parámetro "b" para pedir dos números. Además, dentro de las llaves "{}", vamos a crear una variable "result" (resultado en inglés) que guarde el resultado de cada operación y luego la vamos a devolver (return):
+
+        *-function sumaCb(a,b){
+            result= a+b;
+            return result;
+        }
+
+        *-function restaCb(a,b){
+            result= a-b;
+            return result;
+        }
+    
+    Después vamos a crear una función llamada "calcular", esta función va a pedir primero que nada 2 (dos) números (a y b) y luego la función "CallBack" (que va a tener el nombre de "cb") para saber si restar o sumar (sumaCB o restaCB). Dentro de las llaves "{}" de la función "calcular" vamos a usar, llamar o invocar el callback que hayamos pasado como parámetro y dentro del callback (cb) vamos a pasar los parámetros "a" y "b":
+
+        *-function calcular(a, b, cb){
+            cb(a,b)
+        }
+
+    Con esto completado, ya podríamos usar la funcion "calcular" y pasarle los parámetros que querramos para sumar o restar.
+
+        En el caso de la suma:
+            *-calcular(6, 5, sumaCB);
+
+        Esto devolvería el número: 11
+
+        En el caso de la resta:
+            *-calcular(6, 5, restaCB);
+
+        Esto devolvería el número: 1
