@@ -1,0 +1,130 @@
+	====================================
+		Explicaciones
+	====================================
+
+	Supongamos que tenemos 3 marcas de bebidas, Coca-Cola, Mirinda y Red Bull. Todas estas son distintas entre sí, es decir, tienen características diferentes pero, todas son bebidas. Primero, para darle cada característica a cada bebida, podemos usar los "objetos" del lenguaje y así otorgarle las propiedades pero, si todas son bebidas. 
+
+	¿Cómo las clasifico como bebidas? 
+	
+	Bueno, para esto tenemos las "clases", que tal como su nombre indica, clasifica objetos y comúnmente se le añaden funciones al "prototipo". Este "prototipo" de la "clase" se compone de un constructor, el cual almacena cada propiedad del objeto que queremos clasificar, y también tiene la capacidad de crear funciones sin tener que crearlas en cada objeto.
+
+	¿Qué? ¿Prototipo?
+
+	El prototipo se refiere a una parte de cómo se forma una clase, este tiene la capacidad de crear funciones que se complementen con los objetos creados en el constructor de la clase.
+
+	Principalmente, el prototipo está presente en cada objeto, función,clase, etc. creado en JavaScript. Digamos que, por ejemplo, JS tiene una caja con la estructura básica de una clase con la cual reconoce que es una clase, este sería el prototipo, también sirve con objetos y etc.
+
+	Una gran ventaja de las clases es que, el trabajo de crear objetos, es automático, es decir, no necesitas crear cada objeto por separado copiando y pegando propiedades, simplemente escribes las propiedades que pide y las clases se encargan de construir un objeto.
+
+	¿Cómo usar estas "clases"?
+
+	Empezamos utilizando la palabra reservada "class", seguido de esto, el nombre de nuestra clase o clasificación, y por último colocamos llaves "{}", en la cual vamos a construir el "cuerpo" de la clase ("constructor").
+
+	*Nota: Es un estándar que el nombre de las clases empiecen con mayúsculas.
+
+	¿Cuerpo? ¿Constructor?...
+
+	¡Sí!, el cuerpo sería el apartado de "constructor", este almacena todos los datos de los objetos que queremos crear dentro de la clase para poder utilizar cada dato en distintas funciones. Para usar "constructor", simplemente empezamos escribiendo dentro de las llaves "{}" de la clase la palabra "constructor" seguido de paréntesis "()" y luego llaves "{}". 
+
+	Dentro de los paréntesis vamos a "pedir" cada propiedad de cada objeto separada por comas "," (por ejemplo: azúcares, valor energético, etc.).
+	
+	Luego, dentro de las llaves "{}" del "constructor" formamos algo parecido al cuerpo de un objeto tradicional pero, creando "variables" con la palabra reservada "this." (más adelante explico lo que significa), luego del punto de "this." colocamos el nombre de la propiedad que pedimos entre los paréntesis "()", asignamos las propiedades con un signo de igual "=" y la propiedad dentro de los paréntesis.
+
+	Vamos directamente con un ejemplo visual. 
+	
+	class NombreDeLaClase {
+		constructor (propiedadUno, propiedadDos){
+			this.propiedadUno = propiedadUno;
+			this.propiedadDos = propiedadDos;
+		}
+	}
+	Acá podemos ver como "constructor" pide 2 propiedades y las guarda en nuevas variables "this."
+
+	¿Qué significa "this."?
+	
+	"this." ("esto" en inglés) hace referencia al uso de una propiedad en el "padre" del objeto "constructor", en este caso, el padre sería la clase "NombreDeLaClase". Esto quiere decir que, por ejemplo, la variable "this.propiedadUno", SÓLO FUNCIONA DENTRO DE LA CLASE "NombreDeLaClase", fuera de la clase, no existe una variable "this.propiedadUno". De esta manera podemos crear una propiedad de un objeto dentro del constructor en forma de variable y utilizarla en toda la clase, por ejemplo, para crear funciones.
+	
+	¿Te parece si vemos un ejemplo más práctico?
+	
+	Vamos con el primer problema, el de las bebidas.
+
+	Creemos la clase "Bebidas" y formamos el constructor que va a obtener las propiedades de cada una.
+	Dentro del constructor vamos a pedir las siguientes propiedades:
+	+Valor energético (valorEnergetico)
+	+Azúcares (azucares)
+	+Color (color)
+	+Es bebible (esBebible)
+	Y luego vamos a guardarlas en variables "this."
+
+	Hagamos una primera función llamada "propiedades" que devuelva (return) todas las propiedades de cada bebida en forma de objeto.
+
+	Además vamos a crear una segunda función llamada "beber" que verifique (con una estructura condicional "if") que la propiedad "esBebible" sea verdadera (true), y si lo es, que devuelva (return) en cadena de texto "Se puede tomar".
+	
+		*-class Bebidas{
+			constructor (valorEnergetico, azucares, color, esBebible){
+				this.valorEnergetico = valorEnergetico;
+				this.azucares = azucares;
+				this.color = color;
+				this.esBebible = esBebible;
+			}
+
+			propiedades(){
+				return {
+					`
+					Valor Energético: ${this.valorEnergetico},
+					Azúcares: ${this.azucares},
+					Color: ${this.color},
+					Es bebible: ${this.esBebible}`
+				}
+			}
+
+			beber(){
+				if(this.esBebible === true){
+					return "Se puede tomar"
+				}
+			}
+		}
+
+	¡Perfecto!, ahora tenemos que crear nuestras bebidas u objetos que sean parte de la clase "Bebidas".
+	Esto se logra mucho más fácil que la creación tradicional de objetos, primero poniendo el nombre del objeto seguido de un signo igual "=", después utilizamos la palabra reservada "new" ("nuevo" en inglés), luego el nombre de la clase y por último entre paréntesis colocamos directamente las propiedades que necesita el "constructor" (lo que pide entre paréntesis) en orden.
+
+	Creamos nuestros objetos con sus propiedades.
+
+	CocaCola = new Bebidas ("42kcal", "10g", "Marrón", true);
+
+	Mirinda = new Bebidas ("44kcal", "11g", "Naranja", true);
+
+	RedBull = new Bebidas ("46kcal", "11g", "Amarillo", true);
+
+	Con esto ya hecho, ¡ya podríamos ejecutar las funciones con cada bebida! porque JavaScript se encarga de formar los objetos automáticamente.
+	Entonces si nosotros ejecutamos la funcion ".beber()", por ejemplo, nos devolvería lo siguiente en cada caso:
+	(Las partes entre "/**/" es lo que devuelve la función en cada caso)
+
+		*-CocaCola.beber()
+		/*"Se puede tomar"*/
+
+		*-Mirinda.beber()
+		/*"Se puede tomar"*/
+
+		*-RedBull.beber()
+		/*"Se puede tomar"*/
+
+	Y en el caso de la función ".propiedades()" nos devolvería lo siguiente:
+		*-CocaCola.beber()
+		/*"Valor Energético: 42kcal,
+			Azúcares: 10g,
+			Color: Marrón,
+			Es bebible: true*/
+
+		*-Mirinda.beber()
+		/*"Valor Energético: 44kcal,
+			Azúcares: 11g,
+			Color: Naranja,
+			Es bebible: true*/
+
+		*-RedBull.beber()
+		/*"Valor Energético: 46kcal,
+			Azúcares: 11g,
+			Color: Amarillo,
+			Es bebible: true*/
+
