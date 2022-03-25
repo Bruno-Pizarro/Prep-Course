@@ -33,7 +33,7 @@
     Aclaro antes de empezar que esta forma de crear una calculadora NO ES LA RECOMENDADA, simplemente está hecha de forma que sea intuitiva.
 
     Primero vamos a crear 2 callback, una función de SUMA y una de RESTA.
-    Dentro de cada CallBack, vamos a pedir un parametro "a" y un parámetro "b" para pedir dos números. Además, dentro de las llaves "{}", vamos a crear una variable "result" (resultado en inglés) que guarde el resultado de cada operación y luego la vamos a devolver (return):
+    Dentro de cada CallBack, vamos a pedir un parámetro "a" y un parámetro "b" para pedir dos números. Además, dentro de las llaves "{}", vamos a crear una variable "result" (resultado en inglés) que guarde el resultado de cada operación y luego la vamos a devolver (return):
 
         *-function sumaCb(a,b){
             result= a+b;
@@ -51,7 +51,7 @@
             cb(a,b)
         }
 
-    Con esto completado, ya podríamos usar la funcion "calcular" y pasarle los parámetros que querramos para sumar o restar.
+    Con esto completado, ya podríamos usar la función "calcular" y pasarle los parámetros que querramos para sumar o restar.
 
         En el caso de la suma:
             *-calcular(6, 5, sumaCB);
